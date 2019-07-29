@@ -26,8 +26,7 @@ import googlebook.books.findbook.R;
 import googlebook.books.findbook.room.watchedBook.WatchedBook;
 import googlebook.books.findbook.network.bookModels.Items;
 import googlebook.books.findbook.mvp.findActivity.di.FindActivityModule;
-import uk.co.deanwild.materialshowcaseview.MaterialShowcaseSequence;
-import uk.co.deanwild.materialshowcaseview.ShowcaseConfig;
+
 
 public class FindActivity extends AppCompatActivity implements FindActivityContract.View,FindActivityContract.BookListener {
 
@@ -60,7 +59,7 @@ public class FindActivity extends AppCompatActivity implements FindActivityContr
                 .inject(this);
 
 
-        createShowCase();
+
 
         adapter = new FindAdapter(this);
         bookRecycler.setLayoutManager(new LinearLayoutManager(this));
@@ -74,19 +73,7 @@ public class FindActivity extends AppCompatActivity implements FindActivityContr
 
     }
 
-    private void createShowCase() {
-        ShowcaseConfig config = new ShowcaseConfig();
-        config.setDelay(500); // half second between each showcase view
-        MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(this, "First");
-        sequence.setConfig(config);
 
-        sequence.addSequenceItem(searchEditText,
-                "Here u can type what u looking for ", "GOT IT");
-
-        sequence.addSequenceItem(searchButton,
-                "This is button for Search", "GOT IT");
-        sequence.start();
-    }
 
 
     @OnClick(R.id.search_button)
