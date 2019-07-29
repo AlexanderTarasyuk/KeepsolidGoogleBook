@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightSkin"
+
+    >
+    <ImageView
+        android:id="@+id/ImageCover"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchEditText"
+        android:layout_marginStart="@dimen/standard_mar"
+        android:layout_marginEnd="@dimen/standard_mar"
+        android:layout_marginTop="@dimen/standard_mar"
+        android:layout_marginBottom="@dimen/standard_mar"
+        android:contentDescription="@string/images_of_books" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/book_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchEditText"
+        android:layout_marginStart="@dimen/standard_mar"
+        android:layout_marginEnd="@dimen/standard_mar"
+        android:layout_marginTop="@dimen/standard_mar"
+        android:layout_marginBottom="@dimen/standard_mar"
+
+        />
+
+
+
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_marginStart="@dimen/standard_mar"
+        android:layout_marginEnd="@dimen/standard_mar"
+        android:layout_marginTop="@dimen/standard_mar"
+        android:layout_marginBottom="@dimen/standard_mar"
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"
+        android:hint="@string/type_book_text_or_authors"
+        android:textColorHint="#FFFFFF"
+
+      />
+
+    <Button
+        android:layout_marginStart="@dimen/standard_mar"
+        android:layout_marginEnd="@dimen/standard_mar"
+        android:layout_marginTop="@dimen/standard_mar"
+        android:layout_marginBottom="@dimen/standard_mar"
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/search_button_corners"
+        app:layout_constraintBottom_toBottomOf="@id/searchEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/searchEditText"
+        app:layout_constraintVertical_bias="0.478" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+
+
+</android.support.constraint.ConstraintLayout>

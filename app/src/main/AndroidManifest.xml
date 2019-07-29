@@ -1,0 +1,30 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="googlebook.books.findbook">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="googlebook.books.findbook.FindBookApplication"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+
+
+        <activity
+            android:name="googlebook.books.findbook.mvp.findActivity.FindActivity">
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+    </activity>
+        <activity android:name="googlebook.books.findbook.mvp.chosenBookActivity.ChosenBookActivity" />
+        <activity android:name="googlebook.books.findbook.mvp.chosenBookActivity.webView.WebViewForChosenBookLinks" />
+        <activity android:name="googlebook.books.findbook.mvp.bookHistory.BookHistoryActivity" />
+
+
+    </application>
+
+</manifest>
